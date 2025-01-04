@@ -1,188 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design and Analysis of Algorithms</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- FullPage.js Styles -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css">
-
-  <style>
-    /* Base Styles */
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    h1 {
-      font-family: 'Merriweather', serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    /* Floating Navigation */
-    .floating-menu {
-      position: fixed;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .floating-menu a {
-      display: block;
-      padding: 10px 15px;
-      color: #333;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .floating-menu a:hover {
-      background: #4CAF50;
-      color: #fff;
-    }
-
-    /* Grid Layout for Sections */
-    .section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: center;
-      padding: 60px 10%;
-    }
-
-    .section:nth-child(even) {
-      background-color: #f9fafc;
-    }
-
-    .section img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* Hover Effects */
-    .hover-box {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hover-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Smooth Animations */
-    .animate-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .animate-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Floating Navigation -->
-  <div class="floating-menu">
-    <a href="#intro">Introduction</a>
-    <a href="#course-about">About Course</a>
-    <a href="#course-project">Course Project</a>
-    <a href="#team-assessment">Team Assessment</a>
-    <a href="#course-learning">Learning Reflections</a>
-  </div>
-
-  <!-- FullPage.js Sections -->
-  <div id="fullpage">
-    <!-- Section 1: Introduction -->
-    <div class="section animate-in" id="intro">
-      <div>
-        <h1>Design and Analysis of Algorithms</h1>
-        <p>NAME: MOHAMMED WASEEM R NAIKAR</p>
-        <p>USN: 01FE24BCS406S</p>
-        <p>An advanced course exploring the design and analysis of algorithms, including theoretical and practical concepts.</p>
-      </div>
-      <img src="intro_image.jpg" alt="Introduction">
-    </div>
-
-    <!-- Section 2: About Course -->
-    <div class="section animate-in" id="course-about">
-      <div>
-        <h1>About Course</h1>
-        <p>This course encompasses essential topics like Sorting Techniques, Graph Traversals, Advanced Trees, and Dynamic Programming.</p>
-      </div>
-      <img src="course_about.jpg" alt="About Course">
-    </div>
-
-    <!-- Section 3: Course Project -->
-    <div class="section animate-in" id="course-project">
-      <div>
-        <h1>Course Project</h1>
-        <p>Applying algorithmic methods for efficient solutions to real-world problems.</p>
-      </div>
-      <img src="project_image.jpg" alt="Course Project">
-    </div>
-
-    <!-- Section 4: Team Assessment -->
-    <div class="section animate-in" id="team-assessment">
-      <div>
-        <h1>Team Members</h1>
-        <div class="hover-box">
-          <p><strong>Md Waseem R Naikar</strong></p>
-          <p><a href="BC.html">View Business Case</a></p>
-        </div>
-      </div>
-      <img src="team.jpg" alt="Team">
-    </div>
-
-    <!-- Section 5: Learning Reflections -->
-    <div class="section animate-in" id="course-learning">
-      <div>
-        <h1>Learning Reflections</h1>
-        <p>Reflecting on algorithmic problem-solving techniques, efficiency analysis, and practical implementations.</p>
-      </div>
-      <img src="learning.jpg" alt="Learning Reflections">
-    </div>
-  </div>
-
-  <!-- FullPage.js Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"></script>
-  <script>
-    new fullpage('#fullpage', {
-      scrollBar: true,
-      navigation: true,
-      navigationPosition: 'right',
-      showActiveTooltip: true,
-    });
-
-    // Intersection Observer for Animation
-    const sections = document.querySelectorAll('.animate-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #dfffd6; /* Light green background */
+            color: #333;
         }
-      });
-    });
-    sections.forEach(section => observer.observe(section));
-  </script>
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #27ae60; /* Green background */
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #2ecc71; /* Lighter green on hover */
+        }
+
+        /* Personal Information Section */
+        .personal-info {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            border-radius: 10px;
+        }
+        .personal-info h1 {
+            color: #27ae60;
+            font-size: 28px;
+            margin: 0;
+        }
+        .personal-info p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .personal-info a {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Center Bar and Content Section Styles */
+        .center-bar {
+            background-color: #fff; /* White bar */
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            border-radius: 10px;
+        }
+        .center-bar h1 {
+            font-size: 28px;
+            color: #27ae60;
+            margin: 0;
+        }
+        .center-bar h2 {
+            font-size: 22px;
+            color: #27ae60;
+            margin: 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content-section h1 {
+            font-size: 28px;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        .content-section h2 {
+            font-size: 22px;
+            color: #27ae60;
+            margin-top: 0;
+        }
+        .content-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .content-box {
+            flex: 1 1 45%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .content-box h2 {
+            font-size: 22px;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        .content-box p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#my-portfolio">My Portfolio</a>
+        <a href="Cours_Introduction.html" target="_blank"><strong>Course Introduction</strong></a>
+        <a href="Course_Project_Introduction.html" target="_blank"><strong>Course Project Introduction</strong></a>
+        <a href="Business_Models.html" target="_blank"><strong>Business Models</strong></a>
+    </nav>
+
+    <!-- Personal Information Section -->
+    <div id="my-portfolio" class="personal-info">
+        <h1>Anuja Hanamagoudar</h1>
+        <p>Welcome to my portfolio! I am passionate about technology and problem-solving.</p>
+
+        <h2>🛠 Projects</h2>
+        <p><strong>Project 1:</strong> Smart City Rajpur is an ambitious urban development project aimed at transforming Rajpur into a modern, sustainable, and technology-driven city. The initiative focuses on improving infrastructure, including smart traffic management, efficient waste disposal systems, and reliable public transportation. With the integration of IoT (Internet of Things) technology, the city seeks to enhance the quality of life for its residents by providing better healthcare, education, and safety services. Renewable energy solutions, green spaces, and eco-friendly practices are central to the vision, ensuring that Rajpur becomes an environmentally sustainable and future-ready urban space.</p>
+
+        <h2>🚀 Skills</h2>
+        <p>C, C++ <br> Data Structures and Algorithms</p>
+
+        <h2>🌐 Find Me Online</h2>
+        <p><a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+
+        <h2>Portfolio Topic</h2>
+        <p><strong>Course Name:</strong> Algorithmic Problem Solving <br> <strong>Course Code:</strong> 24ECSC205</p>
+
+        <h2>Instructor & University</h2>
+        <p><strong>Instructor:</strong> Arundhati Aralimatti <br> <strong>University:</strong> KLE Technological University, Hubballi</p>
+
+        <h2>Portfolio Topic/Domain</h2>
+        <p>Smart City</p>
+
+        <h2>Inspirational Quote</h2>
+        <p>“The only way to do great work is to love what you do.” – Steve Jobs</p>
+    </div>
 </body>
 </html>
