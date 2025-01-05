@@ -652,7 +652,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"></script>
   <script>
     new fullpage('#fullpage', {
-      scrollBar: true, /* Disable scrolling */
+      scrollBar: false, /* Disable scrolling */
       navigation: false, /* No side navigation */
       navigationPosition: 'right',
       showActiveTooltip: false,
@@ -664,10 +664,9 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observe.unobserve(entry.target);
         }
       });
-    }{threshold:0.25});
+    });
     sections.forEach(section => observer.observe(section));
   </script>
 </body>
