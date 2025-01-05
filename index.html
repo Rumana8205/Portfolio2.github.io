@@ -723,15 +723,10 @@
 
 
                 new fullpage('#fullpage', {
-                scrollBar: true, /* Disable scrolling */
-                navigation: true, /* No side navigation */
+                scrollBar: false, /* Disable scrolling */
+                navigation: false, /* No side navigation */
                 navigationPosition: 'right',
-                showActiveTooltip: true,
-                archors['intro','course-about','course-project','team-assessment','reflection],
-                afterLoad:function(origin,destination){
-                  console.log('loaded:${destination.archor}');
-                destination.item.classlist.add('visible');
-                }
+                showActiveTooltip: false,
                 });
 
                 // Intersection Observer for Animation
