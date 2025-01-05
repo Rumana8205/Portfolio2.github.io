@@ -53,8 +53,6 @@
       height: 100vh;
       scroll-snap-align:start;
       scroll-snap-stop:always;
-      /*scroll-snap-align:start;
-      scroll-snap-stop:always;*/
     }
 
     .section:nth-child(even) {
@@ -732,11 +730,6 @@
                 navigationPosition: 'right',
                 showActiveTooltip: false,
                 showActiveTooltip: true,
-                archors['intro','course-about','course-project','team-assessment','reflection],
-                afterLoad:function(origin,destination){
-                  console.log('loaded:${destination.archor}');
-                destination.item.classlist.add('visible');
-                }
                 });
 
                 // Intersection Observer for Animation
