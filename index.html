@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart City Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #dfffd6; /* Light green background */
-            color: #333;
-        }
-        /* Navigation Bar Styles */
-        nav {
-            background-color: #27ae60; /* Green background */
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            font-size: 18px;
-            margin: 0 15px;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #2ecc71; /* Lighter green on hover */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Bus Network Optimization</title>
 
-        /* Personal Information Section */
-        .personal-info {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin: 20px auto;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 80%;
-            border-radius: 10px;
-        }
-        .personal-info h1 {
-            color: #27ae60;
-            font-size: 28px;
-            margin: 0;
-        }
-        .personal-info p {
-            font-size: 16px;
-            color: #333;
-            line-height: 1.6;
-        }
-        .personal-info a {
-            color: #27ae60;
-            text-decoration: none;
-            font-weight: bold;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-        /* Center Bar and Content Section Styles */
-        .center-bar {
-            background-color: #fff; /* White bar */
+  <!-- FullPage.js Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css">
+
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #2e4756; /* Aegean dark */
+      background-color: #f0f4f8; /* Aegean light */
+      scroll_behavior:smooth;
+    }
+
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1a5c7e; /* Aegean blue */
+      text-align: center;
+      margin-top: 30px;
+    }
+      h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1a5c7e; /* Aegean blue */
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #2e4756;
+      text-align: center;
+    }
+
+    /* Background and Section Styling */
+    .section {
+      background-color: #ebf3f8; /* Aegean pale */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      scroll-snap-align:start;
+      scroll-snap-stop:always;
+    }
+
+    .section:nth-child(even) {
+      background-color: #d0e6f1; /* Aegean sky */
+    }
+
+    /* Content Styling */
+           .center-bar {
+            background-color:#588BAE; 
             padding: 20px;
             text-align: center;
             margin: 20px auto;
@@ -69,12 +76,12 @@
         }
         .center-bar h1 {
             font-size: 28px;
-            color: #27ae60;
+            color:  #1a5c7e;;
             margin: 0;
         }
         .center-bar h2 {
             font-size: 22px;
-            color: #27ae60;
+            color: #1a5c7e;;
             margin: 5px 0 0;
         }
         .content {
@@ -89,12 +96,12 @@
         }
         .content-section h1 {
             font-size: 28px;
-            color: #27ae60;
+            color:  #1a5c7e;
             margin-bottom: 10px;
         }
         .content-section h2 {
             font-size: 22px;
-            color: #27ae60;
+            color:  #1a5c7e;
             margin-top: 0;
         }
         .content-row {
@@ -113,7 +120,7 @@
         }
         .content-box h2 {
             font-size: 22px;
-            color: #27ae60;
+            color:  #1a5c7e;
             margin-bottom: 10px;
         }
         .content-box p {
@@ -121,70 +128,74 @@
             color: #333;
             line-height: 1.6;
         }
-    </style>
+
+    /* Navigation Menu (Top) */
+    .top-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #588BAE; /* Aegean blue */
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .top-menu button {
+      padding: 10px 20px;
+      background: #2e4756; /* Aegean dark */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .top-menu button:hover {
+      background: #1a5c7e; /* Slightly brighter Aegean */
+    }
+
+  /* Smooth Animations */
+      .animate-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 2s ease-out, transform 2s ease-out;
+    }
+
+    .animate-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#my-portfolio">My Portfolio</a>
-        <a href="Cours_Introduction.html" target="_blank"><strong>Course Introduction</strong></a>
-        <a href="Course_Project_Introduction.html" target="_blank"><strong>Course Project Introduction</strong></a>
-        <a href="Business_Models.html" target="_blank"><strong>Business Models</strong></a>
-    </nav>
+  <!-- Navigation Menu at the Top -->
+  <div class="top-menu">
+    <button onclick="fullpage_api.moveTo(1)">Introduction</button>
+    <button onclick="fullpage_api.moveTo(2)">About Course</button>
+    <button onclick="fullpage_api.moveTo(3)">Course Project</button>
+    <button onclick="fullpage_api.moveTo(4)">Team Assessment</button>
+    <button onclick="fullpage_api.moveTo(5)">Learning Reflections</button>
+  </div>
 
-    <!-- Personal Information Section -->
-    <div id="my-portfolio" class="personal-info">
-        <h1>Anuja Hanamagoudar</h1>
-        <p>Welcome to my portfolio! I am passionate about technology and problem-solving.</p>
-
-        <h2>🛠 Projects</h2>
-        <p><strong>Project 1:</strong> Smart City Rajpur is an ambitious urban development project aimed at transforming Rajpur into a modern, sustainable, and technology-driven city. The initiative focuses on improving infrastructure, including smart traffic management, efficient waste disposal systems, and reliable public transportation. With the integration of IoT (Internet of Things) technology, the city seeks to enhance the quality of life for its residents by providing better healthcare, education, and safety services. Renewable energy solutions, green spaces, and eco-friendly practices are central to the vision, ensuring that Rajpur becomes an environmentally sustainable and future-ready urban space.</p>
-
-        <h2>🚀 Skills</h2>
-        <p>C, C++ <br> Data Structures and Algorithms</p>
-
-        <h2>🌐 Find Me Online</h2>
-        <p><a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
-
-        <h2>Portfolio Topic</h2>
-        <p><strong>Course Name:</strong> Algorithmic Problem Solving <br> <strong>Course Code:</strong> 24ECSC205</p>
-
-        <h2>Instructor & University</h2>
-        <p><strong>Instructor:</strong> Arundhati Aralimatti <br> <strong>University:</strong> KLE Technological University, Hubballi</p>
-
-        <h2>Portfolio Topic/Domain</h2>
-        <p>Smart City</p>
-
-        <h2>Inspirational Quote</h2>
-        <p>“The only way to do great work is to love what you do.” – Steve Jobs</p>
+  <!-- FullPage.js Sections -->
+  <div id="fullpage">
+    <!-- Section 1: Introduction -->
+    <div class="section animate-in" id="intro">
+      <h1>City Bus Network Optimization</h1>
+      <div class="content">
+        <p>Our project focuses on optimizing city bus networks to improve efficiency, reduce travel time, and minimize congestion using advanced algorithmic techniques. By leveraging graph algorithms (e.g., Dijkstra, Floyd-Warshall), we aim to determine the shortest routes, optimize bus stop placements, and balance passenger load across buses. Real-world examples include Google Maps route optimization and public transit systems like BMTC in Bangalore that use similar algorithms for route and scheduling efficiency.</p>
+      </div> 
     </div>
-     <div id="course-project" class="content-section">
-        <h1>Course Project Introduction</h1>
-        <h1>RAJPUR</h1>
-        <h2>WELCOME TO OUR TEAM PORTFOLIO ON SMART CITY PROJECT</h2>
-        <img src="smart_city.jpg" alt="Smart City" width="900" height="800"><br>
-        <h2>Problem Space:</h2>
-        <p>Cities are growing rapidly, leading to challenges such as overcrowded roads, increased pollution, and inadequate basic resources like water and electricity. We need innovative solutions to address these issues and enhance urban living.</p>
 
-        <h2>White Paper Findings:</h2>
-        <p><strong>Simple Tech Solutions:</strong> Ideas like energy-efficient street lights, traffic management apps, and sensors for monitoring water usage.</p>
-        <p><strong>Successful Cities:</strong> Cities like Copenhagen have adopted bicycles and solar panels to conserve energy and cut down on pollution.</p>
-        <p><strong>Challenges:</strong> The high cost of implementing new systems and the lack of trust or knowledge in using technology remain significant obstacles.</p>
-
-        <h2>City Design Recommendations:</h2>
-        <ul>
-            <li>Upgrade outdated infrastructure like roads, water pipes, and buildings.</li>
-            <li>Implement basic tools such as traffic cameras and air quality sensors.</li>
-            <li>Test new ideas in smaller neighborhoods before a broader rollout.</li>
-            <li>Ensure accessibility and ease of use for all residents.</li>
-            <li>Invest in quality education to empower the community with the necessary skills.</li>
-        </ul>
-
-        <h2>Problem Definition:</h2>
-        <p>Develop a centralized system to streamline the management of university processes.</p>
-    </div>
-            <div class="content-section" id="course-introduction">
-            <div id="COURSE INTRODUCTION" class="center-bar"> </div>
+    <!-- Section 2: About Course -->
+    <div class="section animate-in" id="course-about">
+<div id="COURSE INTRODUCTION" class="center-bar"> </div>
             <h1>COURSE INTRODUCTION</h1>
             <h2>What is the course about?</h2>
             <p>The Design and Analysis of Algorithms course is all about developing a deep understanding of how algorithms work, how they are designed, and how they can be optimized for efficiency.</p>
@@ -199,6 +210,7 @@
         </div>
 
         <div class="content-section" id="real-world-connection">
+        <div class="section animate-in"  id="real-world-connection">
             <h1>CONNECTION WITH REAL WORLD</h1>
             <h2>What kind of data structures and algorithms have I studied?</h2>
             <p>During the course, I explored a variety of data structures and algorithms, including:</p>
@@ -208,6 +220,7 @@
         </div>
 
         <div class="content-section" id="importance">
+        <div class="section animate-in"  id="importance">
             <h1>Why is this course important?</h1>
             <p>This course is a stepping stone for anyone aspiring to excel in fields like software engineering, competitive programming, and machine learning. It lays the foundation for efficient problem-solving, a skill crucial in today’s fast-paced technological world. Through this learning portfolio, I aim to demonstrate my understanding and enthusiasm for algorithms and data structures, reflecting on how they shape the software and tools we use daily.</p>
 
@@ -222,7 +235,7 @@
                 <li>The process of learning (daily practice and effort)</li>
                 <li>Resource management at a wedding (iterative allocation of resources)</li>
             </ul>
-            
+
             <p><strong>Recursion</strong></p>
             <ul>
                 <li>The tree that has been growing every day (branches resembling the whole tree structure)</li>
@@ -230,7 +243,7 @@
                 <li>Matryoshka dolls (nested structure with self-similarity)</li>
                 <li>A calendar (days, weeks, and months recur in predictable patterns)</li>
             </ul>
-            
+
             <p><strong>Backtracking</strong></p>
             <ul>
                 <li>Searching for a new friend’s location (exploring different paths or strategies)</li>
@@ -341,7 +354,7 @@
 
             <p><strong>Shortest Path Trees:</strong> Show shortest routes from a starting node, useful for navigation and network optimization.</p>
         </section>
-            
+
     <section>
     <h4>4. Hierarchical data and how different tree data structures solve and optimize problems</h4>
     <table border='2'>
@@ -473,7 +486,7 @@
     <h4>7. Deliberate on Sorting and Searching Algorithms, the Technique Behind Each, and How They Connect to the Real World</h4>
 
     <p><strong>Sorting Algorithms</strong></p>
-    
+
     <ul>
         <li><strong>Bubble Sort:</strong>
             <p><strong>How it works:</strong> Compares adjacent items and swaps them if they’re out of order. Repeats until the list is sorted.</p>
@@ -506,7 +519,7 @@
             <p><strong>Use:</strong> Efficient for priority queues and structured sorting.</p>
         </li>
     </ul>
-    
+
     <p><strong>Searching Algorithms</strong></p>
     <ul>
         <li><strong>Linear Search:</strong>
@@ -543,7 +556,7 @@
 
        <section>
     <h4>8. Discuss the Importance of Graph Algorithms with Respect to Spanning Trees and Shortest Paths</h4>
-    
+
     <p><strong>Dijkstra's Algorithm</strong></p>
     <ul>
         <li><strong>Purpose:</strong> Finds the shortest path from a source node to all other nodes.</li>
@@ -579,10 +592,10 @@
         <li><strong>Use:</strong> Efficient for designing layouts like electrical grids or road networks.</li>
     </ul>
 </section>
-            
+
         <section>
     <h4>9. Discuss the Different Studied Algorithm Design Techniques</h4>
-    
+
     <p><strong>Algorithm Design Techniques</strong></p>
     <ul>
         <li><strong>Brute Force:</strong> Solve problems by trying all possible solutions, guaranteed to find the correct one but inefficient for large inputs.</li>
@@ -607,159 +620,54 @@
     <p><strong>Reflection on Algorithm Design Techniques</strong></p>
     <p>There are several key algorithm design techniques, each serving different problem-solving needs. Backtracking explores all possible solutions and discards those that don’t work, useful for problems like N-Queens or Sudoku. Divide and conquer splits a problem into smaller sub-problems, solves them individually, and then combines the results, as seen in merge sort and quick sort. Brute force relies on trying every possible solution to find the correct one, used in algorithms like the Rabin-Karp algorithm for string matching. Graph algorithms like Dijkstra’s and Floyd-Warshall help find the shortest path in graphs, while Kruskal’s algorithm is used for finding the minimum spanning tree.</p>
 </section>
-            
-        </div>
-    <div id="business-cases" class="content-section">
-        <h1>Business Cases</h1>
-        
-        <section>
-            <h2>Problem Definition</h2>
-            <p>To develop a centralized system to streamline the management of university processes.</p>
-        </section>
-
-<section>
-    <h2>Business Cases Identified:</h2>
-<table border="1">
-    <thead>
-        <tr>
-            <th>SL NO</th>
-            <th>Business Case Identified</th>
-            <th>Description</th>
-            <th>Owner</th>
-            <th>Probable Tools</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Student Admission Management</td>
-            <td>Develop automated system that streamlines the application process, including form submission, document verification, and seat allocation.</td>
-            <td>Anuja H</td>
-            <td>Hash Table, Priority Queue.</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Course Scheduling</td>
-            <td>Use greedy algorithm, where courses are assigned to available time slots based on constraints like instructor availability, room size, and student preferences.</td>
-            <td>Rashmi K</td>
-            <td>BST, Backtracking, Graphs</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Faculty Recruitment and Management</td>
-            <td>Implementing an automated application and screening system, where candidates submit resumes and are evaluated based on predefined criteria.</td>
-            <td>Lata R</td>
-            <td>Hash Table, Priority Queue, Balanced Binary Trees(AVL/R-B Tree)</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Students Performance Tracking</td>
-            <td>Developing centralized system that stores and updates academic data such as grades, attendance, and assignments.</td>
-            <td>Manasi D</td>
-            <td>Arrays, Linked list, BST</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Parking Management</td>
-            <td>Implementing an automated application and screening system, where candidates submit resumes and are evaluated based on predefined criteria.</td>
-            <td>Rashmi & Lata R</td>
-            <td>Hash Maps, Trees, Priority Queue</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Feedback and Quality Assurance</td>
-            <td>Developing Automated systems can prioritize feedback based on urgency and sentiment analysis, streamlining the process for better decision-making</td>
-            <td>Anuja H & Manasi</td>
-            <td>Priority Queue, Dijkstra’s Algorithm</td>
-        </tr>
-    </tbody>
-</table>   
-    <section>
-          <br>
-        <br>
-        <section>
-            <h2>SDG Goals</h2>
-<p>The Sustainable Development Goals (SDGs) play a vital role in ensuring the long-term sustainability of University Processes in Rajpur. The following SDGs are particularly relevant to this project:</p>
-
-<ul>
-    <li><strong>SDG 4 - Quality Education:</strong> <p>Initiatives such as Student Admission Management, Course Scheduling, and Performance Tracking aim to improve access, efficiency, and quality in education systems.<p></li>
-    <li><strong>SDG 10 - Reduced Inequalities:</strong> <p>Streamlining admissions and feedback systems ensures fair access to education and resources for all students, irrespective of socioeconomic background.<p></li>
-    <li><strong>SDG 11 - Sustainable Cities and Communities:</strong> <p>Parking Management and efficient student admissions contribute to the sustainable management of urban infrastructure.<p></li>
-</ul>
-    <a href="Know More About SDGs.html" target="_blank">Know More</a>
- </section>
-        
-    <h2>Team Details:</h2>
-
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div style="flex: 1; min-width: 250px; text-align: center;">
-        <h3 style="font-size: 24px;">Member 1:</h3>
-        <p style="font-size: 18px;">
-            <strong>Name:</strong> Anuja Hanamagoudar<br>
-            <img src="Proffesional_Photo.jpg" alt="Anuja Hanamagoudar" width="200" height="250"><br>
-            <strong>Roll No:</strong> 442<br>
-            <strong>USN:</strong> 01FE23BCS263<br>
-            <strong>Division:</strong> D<br>
-<header>
-<a href="business_case.html" target="_blank"><strong>1.Student Admission Management</strong></a>
-<header>
-        </p>
     </div>
-    <div style="flex: 1; min-width: 250px; text-align: center;">
-        <h3 style="font-size: 24px;">Member 2:</h3>
-        <p style="font-size: 18px;">
-            <strong>Name:</strong> Rashmi Khot<br>
-            <img src="rashmi.jpg" alt="Rashmi Khot" width="200" height="250"><br>
-            <strong>Roll No:</strong> 58<br>
-            <strong>USN:</strong> 01FE23BCS408<br>
-            <strong>Division:</strong> D<br>
 
- <header>
-    <a href="https://rashmikhot.github.io/DaaPortfolio.github.io/index.html" target="_blank"><strong>2.Course Scheduling</strong></a>
-<header>
-        
-        </p>
+    <!-- Section 3: Course Project -->
+    <div class="section animate-in" id="course-project">
+      <h1>Course Project</h1>
+      <div class="content">
+        <p>Developing a simulation model for an optimized city bus network, utilizing data-driven approaches for route planning and scheduling.</p>
+      </div>
     </div>
-    <div style="flex: 1; min-width: 250px; text-align: center;">
-        <h3 style="font-size: 24px;">Member 3:</h3>
-        <p style="font-size: 18px;">
-            <strong>Name:</strong> Lata Rathod<br>
-            <img src="lata.jpg" alt="Lata Rathod" width="200" height="250"><br>
-            <strong>Roll No:</strong> 459<br>
-            <strong>USN:</strong> 01FE23BCS409<br>
-            <strong>Division:</strong> D<br>
- <header>
-    <a href="https://lata-qa.github.io/daa1/" target="_blank"><strong>3.Faculty Recruitment and Management</strong></a>
-<header>
-        </p>
-    </div>
-    <div style="flex: 1; min-width: 250px; text-align: center;">
-        <h3 style="font-size: 24px;">Member 4:</h3>
-        <p style="font-size: 18px;">
-            <strong>Name:</strong> Manasi Divate<br>
-            <img src="manasi.jpg" alt="Manasi Divate" width="200" height="250"><br>
-            <strong>Roll No:</strong> 453<br>
-            <strong>USN:</strong> 01FE23BCS403<br>
-            <strong>Division:</strong> D<br>
- <header>
-    <a href="https://manasi-divate.github.io/ManasiDaaPortfolio.github.io/" target="_blank"><strong>4.Students Performance Tracking</strong></a>
-<header>
-        </p>
-</div>
-    <div style="flex: 1; min-width: 250px; text-align: center;">
-        <h3 style="font-size: 24px;">Member 5:</h3>
-        <p style="font-size: 18px;">
-            <strong>Name:</strong> Aishwarya Kotagi<br>
-            <img src="....jpg" alt="Aishwarya Kotagi" width="200" height="250"><br>
-            <strong>Roll No:</strong> 401<br>
-            <strong>USN:</strong> 01FE23BCS101<br>
-            <strong>Division:</strong> D<br>
 
-        </p>
+    <!-- Section 4: Team Assessment -->
+    <div class="section animate-in" id="team-assessment">
+      <h1>Team Members</h1>
+      <div class="content">
+        <p><strong>Md Waseem R Naikar</strong></p>
+        <p><a href="BC.html" style="color: #1a5c7e;">View Business Case</a></p>
+      </div>
     </div>
-     <a href="https://rashmikhot.github.io/DaaPortfolio.github.io/ProjectImplementation2.html" target="_blank"><strong>5.Parking Management</strong></a>
-       <a href="Feedback.html" target="_blank"><strong>6.Feedback And Quality Assurance</strong></a>
-       
-</div>
+
+    <!-- Section 5: Learning Reflections -->
+    <div class="section animate-in" id="course-learning">
+      <h1>Learning Reflections</h1>
+      <div class="content">
+        <p>Reflecting on algorithmic problem-solving techniques, including efficiency analysis, practical applications, and optimization modeling.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FullPage.js Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      scrollBar: true, /* Disable scrolling */
+      navigation: false, /* No side navigation */
+      navigationPosition: 'right',
+      showActiveTooltip: false,
+    });
+
+    // Intersection Observer for Animation
+    const sections = document.querySelectorAll('.animate-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
