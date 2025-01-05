@@ -14,7 +14,7 @@
       padding: 0;
       color: #2e4756; /* Aegean dark */
       background-color: #f0f4f8; /* Aegean light */
-      scroll_behavior:smooth;
+      scroll-behavior:smooth;
     }
 
     h1 {
@@ -180,7 +180,7 @@
       </div>
     </div>
     <div class="section animate-in" id="course-about">
-      <div id="COURSE INTRODUCTION" class="center-bar"></div>
+      <div id="COURSE_INTRODUCTION" class="center-bar"></div>
       <h1>COURSE INTRODUCTION</h1>
       <p>COURSE NAME: Algorithmic problem solving </p>
       <p>COURSE CODE: 24ECSC205</p>
@@ -206,8 +206,8 @@
         <p><strong>Algorithms:</strong> Sorting algorithms like Merge Sort and Quick Sort, graph algorithms like Dijkstra’s and Kruskal’s, and advanced string matching algorithms like Rabin-Karp and Boyer-Moore.</p>
         <p>Each topic built upon the foundational knowledge, helping me to analyze problems from different perspectives and apply the most suitable data structure or algorithm.</p>
 
-      <div class="content-section" id="importance">
-        <div class="section animate-in" id="importance">
+      <div class="content-section" id="importance-overview"></div>
+      <div class="section animate-in" id="importance-details"></div>
           <h1>Why is this course important?</h1>
           <p>This course is a stepping stone for anyone aspiring to excel in fields like software engineering, competitive programming, and machine learning. It lays the foundation for efficient problem-solving, a skill crucial in today’s fast-paced technological world. Through this learning portfolio, I aim to demonstrate my understanding and enthusiasm for algorithms and data structures, reflecting on how they shape the software and tools we use daily.</p>
           <section>
@@ -247,7 +247,17 @@
             </ul>
             <p>In the world of computer science, to perform better, we need to write algorithms that are time-efficient and use less memory. Algorithms should be resource-optimized, solving larger problems with limited computing power, and improving user experience and system performance.</p>
             <h4>Different Classes of Problems and Orders of Growth:</h4>
-            <table border="1">
+            <table class="styled-table"></table>
+            .styled-table {
+                 border-collapse: collapse;
+                  width: 100%;
+             }
+            .styled-table th, .styled-table td {
+             border: 1px solid black; /* Or '2px' if needed */
+             padding: 8px;
+             text-align: left;
+             }
+
               <thead>
                 <tr>
                   <th>Order of Growth</th>
@@ -313,7 +323,17 @@
           </section>
           <section>
             <h4>4. Hierarchical data and how different tree data structures solve and optimize problems</h4>
-            <table border='2'>
+            <table class="styled-table"></table>
+            .styled-table {
+                 border-collapse: collapse;
+                  width: 100%;
+             }
+
+            .styled-table th, .styled-table td {
+             border: 1px solid black; /* Or '2px' if needed */
+            padding: 8px;
+            text-align: left;
+               }
               <thead>
                 <tr>
                   <th>Tree Type</th>
@@ -418,13 +438,13 @@
             </ul>
             <p><strong>Applications:</strong></p>
             <ul>
-              <li><strong>Tree Applications:</strong></li>
+              <li><strong>Tree Applications:</strong>
               <ul>
                 <li>File System: Organizing folders and files.</li>
                 <li>Binary Search Tree (BST): Efficiently finding data in databases.</li>
                 <li>Decision Trees: Used in making decisions, like in machine learning.</li>
               </ul>
-              <li><strong>Graph Applications:</strong></li>
+              <li><strong>Graph Applications:</strong>
               <ul>
                 <li>Social Networks: Connections between people (friends, followers).</li>
                 <li>Maps/Navigation: Finding the shortest route between cities or locations.</li>
@@ -565,8 +585,8 @@
             <p>There are several key algorithm design techniques, each serving different problem-solving needs. Backtracking explores all possible solutions and discards those that don’t work, useful for problems like N-Queens or Sudoku. Divide and conquer splits a problem into smaller sub-problems, solves them individually, and then combines the results, as seen in merge sort and quick sort. Brute force relies on trying every possible solution to find the correct one, used in algorithms like the Rabin-Karp algorithm for string matching. Graph algorithms like Dijkstra’s and Floyd-Warshall help find the shortest path in graphs, while Kruskal’s algorithm is used for finding the minimum spanning tree.</p>
           </section>
         </div>
-        <div id="course-project" class="content-section">
-          <div class="section animate-in" id="course-project">
+        <div id="course-project" class="content-section"></div>
+           <div class="section animate-in" id="course-project"></div>
             <h1>Course Project Introduction</h1>
             <h1>PRAGATIPUR</h1>
             <h2>WELCOME TO OUR TEAM PORTFOLIO ON SMART CITY PROJECT</h2><img src="smart_city.jpg" alt="Smart City" width="900" height="800"><br>
@@ -583,7 +603,7 @@
             <h2>Problem Definition:</h2>
             <p>To optimize city bus networks using advanced algorithms for efficient route planning, reduced travel time, balanced passenger load, and enhanced commuter experience.</p>
           </div>
-          <div id="Team Assessment" class="content-section">
+          <div id="Team-Assessment" class="content-section">
             <h1>Team Assesment</h1>
             <section>
               <h2>Problem Definition</h2>
@@ -591,7 +611,16 @@
             </section>
             <section>
               <h2>Cases Identified:</h2>
-              <table border="1">
+              <table class="styled-table"></table>
+               .styled-table {
+                 border-collapse: collapse;
+                  width: 100%;
+                }
+             .styled-table th, .styled-table td {
+                 border: 1px solid black; /* Or '2px' if needed */
+                  padding: 8px;
+                  text-align: left;
+                 }
                 <thead>
                   <tr>
                     <th>SL NO</th>
@@ -755,7 +784,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </body>
 </html>
